@@ -1,3 +1,4 @@
+import pkg_resources
 import yaml
 
 def print_hello():
@@ -9,11 +10,11 @@ def get_versions():
     return _get_versions()
 
 def get_requirements():
-    with open('./data/requirements.yaml') as file:
+    file_path=pkg_resources.resource_filename('test_uibcdf_library','data/requirements.yml')
+    with open(file_path) as file:
         requirements = yaml.load(file, Loader=yaml.FullLoader)
     return requirements
 
 def list_files_in_data():
-    import pkg_resources
     return pkg_resources.resource_listdir('test_uibcdf_library', 'data')
 
