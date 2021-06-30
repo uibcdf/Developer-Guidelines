@@ -1,6 +1,6 @@
 package:
   name: test_uibcdf_library
-  version: {{ environ['GIT_DESCRIBE_TAG'] }}
+  version:  "{{ environ['GIT_DESCRIBE_TAG'] }}"
 
 source:
   path: ../../
