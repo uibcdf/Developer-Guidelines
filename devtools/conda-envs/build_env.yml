@@ -1,6 +1,0 @@
-name: Test-UIBCDF-Library_build
-channels:
-- default
-dependencies:
-- anaconda-client
-- conda-build
