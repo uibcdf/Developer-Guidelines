@@ -1,6 +1,6 @@
 # Test-UIBCDF-Library
 
-xxx
+UIBCDF Python Library template or example. The library is based on the Computational Molecular Science Python Cookiecutterversion 1.5 with some in-house modifications. The structure and the function of each file are explained in the documentation for future developers of the UIBCDF.
 
 ### Copyright
 
