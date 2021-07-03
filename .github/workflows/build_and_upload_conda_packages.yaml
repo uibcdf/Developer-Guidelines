@@ -8,7 +8,7 @@ on:
 
 jobs:
   conda_deployment_with_new_tag:
-    name: Conda deployment of package to platform ${{ matrix.platform }} with Python ${{ matrix.python-version }}
+    name: Conda deployment of package with Python ${{ matrix.python-version }}
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -24,7 +24,7 @@ jobs:
           auto-activate-base: false
           show-channel-urls: true
       - name: Build and upload the conda packages
-        uses: uibcdf/action-build-and-upload-conda-packages@v1.0-beta.2
+        uses: uibcdf/action-build-and-upload-conda-packages@v1.1-beta.1
         with:
           meta_yaml_dir: devtools/conda-build
           python-version: ${{ matrix.python-version }}
