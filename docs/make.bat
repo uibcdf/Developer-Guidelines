@@ -9,7 +9,7 @@ if "%SPHINXBUILD%" == "" (
 )
 set SOURCEDIR=.
 set BUILDDIR=_build
-set SPHINXPROJ=pyunitwizard
+set SPHINXPROJ=test_uibcdf_library
 
 if "%1" == "" goto help
 
