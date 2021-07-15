@@ -53,7 +53,7 @@ extensions = [
     'sphinx.ext.ifconfig',
     'sphinx.ext.viewcode',
     'sphinx.ext.napoleon',
-#    'sphinx.ext.githubpages',
+    'sphinx.ext.githubpages',
     'sphinxcontrib.bibtex',
     'nbsphinx',
     'recommonmark',
