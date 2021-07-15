@@ -1,7 +1,7 @@
 production:
   channels:
     - conda-forge
-    - default
+    - defaults
   dependencies:
     - python
     - pyyaml
@@ -9,7 +9,7 @@ production:
 development:
   channels:
     - conda-forge
-    - default
+    - defaults
   dependencies:
     - python
     - pyyaml
@@ -18,7 +18,7 @@ development:
 test:
   channels:
     - conda-forge
-    - default
+    - defaults
   dependencies:
     - python
     - pyyaml
@@ -30,7 +30,7 @@ test:
 docs:
   channels:
     - conda-forge
-    - default
+    - defaults
   dependencies:
     - python
     - pyyaml
@@ -44,7 +44,7 @@ docs:
 
 setup:
   channels:
-    - default
+    - defaults
   dependencies:
     - python
     - setuptools
@@ -54,7 +54,7 @@ setup:
 conda-build:
   channels:
     - conda-forge
-    - default
+    - defaults
   dependencies:
     - anaconda-client
     - conda-build
