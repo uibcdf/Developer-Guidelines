@@ -16,7 +16,4 @@ Modify your package's `setup.py` file and the `setup()` command. Include the
 [`package_data`](http://setuptools.readthedocs.io/en/latest/setuptools.html#basic-use) keyword and point it at the 
 correct files.
 
-## Manifest
-
-* `look_and_say.dat`: first entries of the "Look and Say" integer series, sequence [A005150](https://oeis.org/A005150)
 
