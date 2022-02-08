@@ -2,6 +2,9 @@
 
 ## Scientific Python Libraries
 
+You will find specific guidelines in [the UIBCDF Python projects template repository](https://github.com/uibcdf/Python-Projects-Template) and [its
+documentation](https://www.uibcdf.org/Python-Projects-Template/).
+
 ## GitHub Actions
 
 ## License

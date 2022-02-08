@@ -20,33 +20,30 @@ import sys
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 
-import test_uibcdf_library
-
 # -- Project information -----------------------------------------------------
 
-project = 'Test-UIBCDF-Library'
-copyright = ('2021, UIBCDF Lab at the Mexico City Childrens Hospital Federico Gomez and authors.'
-        'Project structure based on the Computational Molecular Science Python Cookiecutter version 1.5')
-author = 'Liliana M. Moreno Vargas & Diego Prada Gracia'
+project = "UIBCDF Developers' Guidelines"
+
+copyright = """\
+Project structure based on the Computational Molecular Science Python Cookiecutter version \
+1.5'"""
+copyright = None
+author = None
 
 # The short X.Y version
-version = test_uibcdf_library.__version__.split('+')[0]
+version = '0.1'
 # The full version, including alpha/beta/rc tags
-release = test_uibcdf_library.__version__
+release = '0.1'
 
 
 # -- General configuration ---------------------------------------------------
-
-# If your documentation needs a minimal Sphinx version, state it here.
-#
-# needs_sphinx = '1.0'
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
+    'sphinx.ext.autodoc',
     'sphinx.ext.intersphinx',
     'sphinx.ext.mathjax',
     'sphinx.ext.todo',
@@ -55,16 +52,27 @@ extensions = [
     'sphinx.ext.napoleon',
     'sphinx.ext.githubpages',
     'sphinxcontrib.bibtex',
-    'nbsphinx',
-    'recommonmark',
-    'sphinx_markdown_tables',
-    'sphinx.ext.extlinks'
+    'sphinx.ext.extlinks',
+    'myst_nb'
 ]
 
 autosummary_generate = True
+
+# Napoleon settings
+napoleon_numpy_docstring = True
 napoleon_google_docstring = False
-napoleon_use_param = False
-napoleon_use_ivar = True
+napoleon_include_init_with_doc = False
+napoleon_include_private_with_doc = False
+napoleon_include_special_with_doc = True
+napoleon_use_admonition_for_examples = False
+napoleon_use_admonition_for_notes = True
+napoleon_use_admonition_for_references = False
+napoleon_use_ivar = False
+napoleon_use_param = True
+napoleon_use_rtype = True
+napoleon_preprocess_types = False
+napoleon_type_aliases = None
+napoleon_attr_annotations = True
 
 # sphinxcontrib-bibtex
 bibtex_bibfiles = ['bibliography.bib'] # list of *.bib files
@@ -80,10 +88,7 @@ templates_path = ['_templates']
 source_parsers={
 }
 
-source_suffix = {
-    '.rst': 'restructuredtext',
-    '.md': 'markdown'
-}
+source_suffix = ['.rst', '.md']
 
 # The master toctree document.
 master_doc = 'index'
@@ -117,20 +122,20 @@ html_theme = 'sphinx_rtd_theme'
 # documentation.
 #
 # html_theme_options = {}
-#html_theme_options = {
-#    'canonical_url': '',
-#    'analytics_id': '',
-#    'logo_only': False,
-#    'display_version': True,
-#    'prev_next_buttons_location': 'bottom',
-#    'style_external_links': False,
-#    # Toc options
-#    'collapse_navigation': False,
-#    'sticky_navigation': True,
-#    'navigation_depth': 4,
-#    'includehidden': True,
-#    'titles_only': False
-#}
+html_theme_options = {
+    'canonical_url': '',
+    'analytics_id': '',
+    'logo_only': False,
+    'display_version': True,
+    'prev_next_buttons_location': 'bottom',
+    'style_external_links': False,
+    # Toc options
+    'collapse_navigation': False,
+    'sticky_navigation': True,
+    'navigation_depth': 4,
+    'includehidden': True,
+    'titles_only': False
+}
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
@@ -160,35 +165,18 @@ html_css_files = [
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'test_uibcdf_librarydoc'
+htmlhelp_basename = 'developer-guidelines-doc'
 
 
 # -- Options for LaTeX output ------------------------------------------------
 
 latex_elements = {
-    # The paper size ('letterpaper' or 'a4paper').
-    #
-    # 'papersize': 'letterpaper',
-
-    # The font size ('10pt', '11pt' or '12pt').
-    #
-    # 'pointsize': '10pt',
-
-    # Additional stuff for the LaTeX preamble.
-    #
-    # 'preamble': '',
-
-    # Latex figure (float) alignment
-    #
-    # 'figure_align': 'htbp',
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-        (master_doc, 'test_uibcdf_library.tex', 'Test-UIBCDF-Library Documentation',
-            'test_uibcdf_library', 'manual'),
 ]
 
 
@@ -197,9 +185,6 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-        (master_doc, 'test_uibcdf_library', 'Test-UIBCDF-Library Documentation',
-            [author], 1)
-
 ]
 
 
@@ -209,10 +194,6 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'test_uibcdf_library', 'Test-UIBCDF-Library Documentation',
-        author, 'test_uibcdf_library', 'This must be a short description of the project',
-        'Miscellaneous'),
-
 ]
 
 
