@@ -24,60 +24,15 @@ import sys
 
 project = "UIBCDF Developers' Guidelines"
 
-copyright = """\
-Project structure based on the Computational Molecular Science Python Cookiecutter version \
-1.5'"""
-copyright = None
-author = None
-
-# The short X.Y version
-version = '0.1'
-# The full version, including alpha/beta/rc tags
-release = '0.1'
-
-
 # -- General configuration ---------------------------------------------------
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    'sphinx.ext.autosummary',
-    'sphinx.ext.autodoc',
-    'sphinx.ext.intersphinx',
-    'sphinx.ext.mathjax',
-    'sphinx.ext.todo',
-    'sphinx.ext.ifconfig',
-    'sphinx.ext.viewcode',
-    'sphinx.ext.napoleon',
     'sphinx.ext.githubpages',
-    'sphinxcontrib.bibtex',
-    'sphinx.ext.extlinks',
     'myst_nb'
 ]
-
-autosummary_generate = True
-
-# Napoleon settings
-napoleon_numpy_docstring = True
-napoleon_google_docstring = False
-napoleon_include_init_with_doc = False
-napoleon_include_private_with_doc = False
-napoleon_include_special_with_doc = True
-napoleon_use_admonition_for_examples = False
-napoleon_use_admonition_for_notes = True
-napoleon_use_admonition_for_references = False
-napoleon_use_ivar = False
-napoleon_use_param = True
-napoleon_use_rtype = True
-napoleon_preprocess_types = False
-napoleon_type_aliases = None
-napoleon_attr_annotations = True
-
-# sphinxcontrib-bibtex
-bibtex_bibfiles = ['bibliography.bib'] # list of *.bib files
-bibtex_default_style = 'alpha'
-bibtex_encoding = 'utf-8-sig'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -104,7 +59,7 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path .
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '**.ipynb_checkpoints']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '**.ipynb_checkpoints', 'README.md']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'default'
@@ -116,6 +71,7 @@ pygments_style = 'default'
 # a list of builtin themes.
 #
 html_theme = 'sphinx_rtd_theme'
+html_theme = 'insipid'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -123,19 +79,13 @@ html_theme = 'sphinx_rtd_theme'
 #
 # html_theme_options = {}
 html_theme_options = {
-    'canonical_url': '',
-    'analytics_id': '',
-    'logo_only': False,
-    'display_version': True,
-    'prev_next_buttons_location': 'bottom',
-    'style_external_links': False,
-    # Toc options
-    'collapse_navigation': False,
-    'sticky_navigation': True,
-    'navigation_depth': 4,
-    'includehidden': True,
-    'titles_only': False
+        'breadcrumbs': False,
+        'nosidebar': True,
+        'show_insipid': True,
+        'body_centered': True
 }
+
+html_show_copyright = False
 
 # Add any paths that contain custom themes here, relative to this directory.
 #html_theme_path = []
@@ -159,7 +109,7 @@ html_css_files = [
 # default: ``['localtoc.html', 'relations.html', 'sourcelink.html',
 # 'searchbox.html']``.
 #
-# html_sidebars = {}
+html_sidebars = {}
 
 
 # -- Options for HTMLHelp output ---------------------------------------------

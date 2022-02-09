@@ -1,0 +1,9 @@
+channels:
+- conda-forge
+- defaults
+dependencies:
+- sphinx
+- sphinx_rtd_theme
+- sphinxcontrib-bibtex
+- myst-nb
+- jupyterlab

@@ -1,0 +1,14 @@
+docs:
+  channels: &docs_channels
+    - conda-forge
+    - defaults
+  dependencies: &docs_dependencies
+    - sphinx
+    - myst-nb
+
+development:
+  channels:
+    - *docs_channels
+  dependencies:
+    - *docs_dependencies
+
